@@ -45,6 +45,9 @@ group :development, :test do
   gem 'byebug'
   gem 'quiet_assets'
   gem 'dotenv-rails'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -58,10 +61,4 @@ end
 group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'
-end
-
-group :test do
-  gem 'capybara'
-  gem 'poltergeist'
-  gem 'database_cleaner'
 end
