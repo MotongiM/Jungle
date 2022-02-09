@@ -9,6 +9,22 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 2. Remove Gemfile.lock
 3. Replace Gemfile with version provided [here](https://gist.githubusercontent.com/FrancisBourgouin/831795ae12c4704687a0c2496d91a727/raw/ce8e2104f725f43e56650d404169c7b11c33a5c5/Gemfile)
 
+
+## How it works
+
+When the user loads the App, he can sign up and login. When he does, he can go on the homepage, choose the article that he wants and add it to cart unless it's sold out.
+
+!["homepage"](https://github.com/MotongiM/Jungle/blob/master/public/Images/Homepage.gif)
+
+From the cart, he can add his credit card infos and once it's confirmed, he will have a confirmation saying that his order has been delivered.
+
+!["Cart_Order-Confirmation"](https://github.com/MotongiM/Jungle/blob/master/public/Images/My-cart_Order-confirmation.gif)
+
+
+If the user is an admin, he can add new categories, as well as products.
+
+!["Admin"](https://github.com/MotongiM/Jungle/blob/master/public/Images/AddingProduct.gif)
+
 ## Setup
 
 1. Run `bundle install` to install dependencies
