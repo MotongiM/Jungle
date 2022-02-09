@@ -2,7 +2,8 @@
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
-  </div>
+    <p>Your order will be delivered to: <%= @order.email %> </p>
+    </div>
 
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
@@ -17,9 +18,11 @@
         </tr>
       </thead>
       <tbody>
-        <% @products.each_with_index do |item, index| %>
-          <%= render 'item', product: item, quantity: @line_items[index].quantity.to_i %>
-        <% end %>
+      <% @order.line_items.each do |line_item| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <%= render 'line_item', product: line_item.product, quantity: line_item.quantity.to_i %>
+        </li>
+      <% end %>
       </tbody>
       <tfoot>
         <tr>
